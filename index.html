@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benish Nisar | Kashmir Stories Official & AI UGC Creator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: {
+                            50: '#F5FAF7',
+                            100: '#E6F4ED',
+                            900: '#032D20', /* Rich Cinematic Deep Green from Logo */
+                        },
+                        accent: {
+                            DEFAULT: '#F59E0B', /* Warm Golden Orange from Logo */
+                            hover: '#D97706',
+                        },
+                        brand: {
+                            DEFAULT: '#064E3B', /* Deep Green text */
+                            muted: '#52796F',   /* Professional muted tone */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5FAF7;
+            color: #1F2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .light-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(6, 78, 59, 0.1);
+            box-shadow: 0 10px 30px -5px rgba(3, 45, 32, 0.06);
+        }
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(3, 45, 32, 0.88), rgba(2, 26, 18, 0.94)), url('assets/img/4fe545755e81570bd3e9ba92259195aa.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #E6F4ED; }
+        ::-webkit-scrollbar-thumb { background: #059669; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+    </style>
+</head>
+<body class="bg-base-50 text-gray-800 selection:bg-accent selection:text-white antialiased">
+
+    <!-- Navbar with Real Logo -->
+    <header class="fixed top-0 left-0 right-0 z-50 light-panel border-b border-emerald-900/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <!-- Logo Image in Navbar -->
+                <img src="assets/img/logo.jpeg" alt="Benish Nisar Logo" class="w-12 h-12 object-cover rounded-xl border border-emerald-900/20 shadow-sm group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="text-base font-bold tracking-tight text-emerald-950 leading-none">BENISH NISAR</span>
+                    <span class="text-[10px] tracking-widest text-accent font-bold uppercase mt-0.5">AI Creator & Studio</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-emerald-900">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#kashmir-stories" class="hover:text-accent transition-colors">Kashmir Stories</a>
+                <a href="#youtube-shorts" class="hover:text-accent transition-colors">YouTube</a>
+                <a href="#instagram-reels" class="hover:text-accent transition-colors">Instagram</a>
+                <a href="#collaborations" class="hover:text-accent transition-colors">Collaborations</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-accent text-white font-semibold hover:bg-accent-hover transition-all shadow-md shadow-amber-500/20">Get in Touch</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-emerald-950 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-6 border-t border-emerald-950/10 shadow-xl">
+            <div class="flex flex-col space-y-4 font-semibold text-emerald-900">
+                <a href="#about" class="mobile-link hover:text-accent">About</a>
+                <a href="#kashmir-stories" class="mobile-link hover:text-accent">Kashmir Stories</a>
+                <a href="#youtube-shorts" class="mobile-link hover:text-accent">YouTube Shorts</a>
+                <a href="#instagram-reels" class="mobile-link hover:text-accent">Instagram Reels</a>
+                <a href="#collaborations" class="mobile-link hover:text-accent">Collaborations</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-accent text-white font-semibold text-center mt-2">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (AI Video Creator Vibe) -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-6 overflow-hidden hero-bg">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+                    <span>AI Video Creator & Cinematic Storyteller</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
+                    Giving Voice to <span class="text-gradient">Kashmir Realities</span> & AI Artistry
+                </h1>
+                <p class="text-lg text-emerald-100/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                    Welcome to Kashmir Stories Official. I am Benish Nisar, pushing the boundaries of AI video generation, prompt engineering, and cinematic digital production.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#youtube-shorts" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-accent text-white font-bold hover:bg-accent-hover hover:-translate-y-1 transition-all shadow-lg shadow-amber-600/30 text-center flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Watch AI Shorts</span>
+                    </a>
+                    <a href="https://www.youtube.com/@BenishKhanStories" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold transition-all border border-white/20 backdrop-blur-md text-center flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+                        <span>Benish Khan Stories</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Portrait Card -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-accent to-emerald-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                    <div class="relative light-panel p-6 rounded-3xl border border-emerald-900/10 space-y-6 bg-white/95">
+                        <div class="relative h-80 rounded-2xl overflow-hidden bg-emerald-950 flex items-center justify-center shadow-inner">
+                            <img src="assets/img/benish-portrait.jpg" alt="Benish Nisar" class="w-full h-full object-cover object-top">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 z-20">
+                                <span class="px-3 py-1 rounded-full bg-accent text-white text-xs font-bold">Kashmir Stories Official</span>
+                                <h3 class="text-xl font-bold text-white mt-1">Benish Nisar</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-sm text-gray-700 font-medium">
+                            <span class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-accent"></i> <span>Kashmir & Pakistan</span></span>
+                            <span class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-accent"></i> <span>AI Creator</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+  <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white relative border-t border-emerald-900/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 relative">
+                <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 group">
+                    <img src="assets/img/benishabout.jpeg" alt="Azad Kashmir Landscape" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-emerald-900/10 flex items-center space-x-3 shadow-lg">
+                            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-accent"></i>
+                            <div>
+                                <p class="text-sm font-bold text-gray-900">Cinematic AI Documentaries</p>
+                                <p class="text-xs text-gray-600">Amplifying Real Ground Realities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm flex items-center space-x-2">
+                    <span class="w-8 h-px bg-accent"></span>
+                    <span>About The Creator</span>
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">Giving Voice to Azad Kashmir’s Current Realities</h2>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    I am Benish Nisar, an AI video creator and digital storyteller dedicated to documenting the true narrative of Azad Kashmir. Beyond the breathtaking landscapes, my work sheds light on the evolving socio-economic challenges, public rights movements, inflation struggles, and the resilient daily realities faced by the local people.
+                </p>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    By merging cutting-edge AI neural rendering and cinematic prompt engineering with authentic local journalism, I transform complex regional updates and humanitarian issues into powerful, high-impact digital stories that resonate across global platforms.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                    <div class="bg-emerald-50/50 p-5 rounded-2xl border border-emerald-900/10 text-center shadow-sm">
+                        <h4 class="text-3xl font-bold text-emerald-950 font-display">100+</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-semibold">AI Documentaries</p>
+                    </div>
+                    <div class="bg-emerald-50/50 p-5 rounded-2xl border border-emerald-900/10 text-center shadow-sm">
+                        <h4 class="text-3xl font-bold text-emerald-950 font-display">Millions</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-semibold">Audience Reach</p>
+                    </div>
+                    <div class="bg-emerald-50/50 p-5 rounded-2xl border border-emerald-900/10 text-center shadow-sm">
+                        <h4 class="text-3xl font-bold text-emerald-950 font-display">Truth</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-semibold">Unfiltered Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Shorts Section -->
+    <section id="youtube-shorts" class="py-24 px-6 bg-base-50 relative border-t border-emerald-900/10">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="text-red-600 font-semibold tracking-wider uppercase text-sm flex items-center justify-center md:justify-start space-x-2">
+                        <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+                        <span>Benish Khan Stories</span>
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">Featured YouTube Shorts</h2>
+                    <p class="text-gray-600 max-w-xl">Explore our cinematic AI shorts and documentaries.</p>
+                </div>
+                <a href="https://www.youtube.com/@BenishKhanStories" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold flex items-center space-x-2 transition-all shadow-md shadow-red-600/20 hover:-translate-y-1">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                    <span>Visit YouTube Channel</span>
+                </a>
+            </div>
+
+            <!-- YouTube Shorts Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <!-- Short 1 -->
+                <a href="https://www.youtube.com/shorts/m_QYtT5o6MU" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/m_QYtT5o6MU/hqdefault.jpg" alt="Short 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #1</span>
+                    </div>
+                </a>
+                <!-- Short 2 -->
+                <a href="https://www.youtube.com/shorts/K4kf0_LHei8" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/K4kf0_LHei8/hqdefault.jpg" alt="Short 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #2</span>
+                    </div>
+                </a>
+                <!-- Short 3 -->
+                <a href="https://www.youtube.com/shorts/LZEqrDaTq7U" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/LZEqrDaTq7U/hqdefault.jpg" alt="Short 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #3</span>
+                    </div>
+                </a>
+                <!-- Short 4 -->
+                <a href="https://www.youtube.com/shorts/qtOHzBbiMqU" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/qtOHzBbiMqU/hqdefault.jpg" alt="Short 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #4</span>
+                    </div>
+                </a>
+                <!-- Short 5 -->
+                <a href="https://www.youtube.com/shorts/afaIXZ6n13s" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/afaIXZ6n13s/hqdefault.jpg" alt="Short 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #5</span>
+                    </div>
+                </a>
+                <!-- Short 6 -->
+                <a href="https://www.youtube.com/shorts/YzTaBTARd3Y" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/YzTaBTARd3Y/hqdefault.jpg" alt="Short 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #6</span>
+                    </div>
+                </a>
+                <!-- Short 7 -->
+                <a href="https://www.youtube.com/shorts/oktSn_PrOOc" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-sm group hover:border-red-500 transition-all cursor-pointer block">
+                    <div class="relative aspect-[9/16] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/oktSn_PrOOc/hqdefault.jpg" alt="Short 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center bg-white border-t border-emerald-900/10">
+                        <span class="text-xs font-bold text-accent">Short #7</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Reels Section -->
+    <section id="instagram-reels" class="py-24 px-6 bg-white relative border-t border-emerald-900/10">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="text-pink-600 font-semibold tracking-wider uppercase text-sm flex items-center justify-center md:justify-start space-x-2">
+                        <i class="fa-brands fa-instagram text-pink-600 text-lg"></i>
+                        <span>Instagram Content</span>
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">Featured Instagram Reels</h2>
+                    <p class="text-gray-600 max-w-xl">Check out our latest Instagram Reels, including the official Startup Kashmir collaboration.</p>
+                </div>
+                <a href="https://www.instagram.com/benishnisar_official/" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:brightness-110 text-white font-semibold flex items-center space-x-2 transition-all shadow-md shadow-pink-600/20 hover:-translate-y-1">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    <span>Visit Instagram Profile</span>
+                </a>
+            </div>
+
+            <!-- Instagram Reels Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <a href="https://www.instagram.com/reel/DfaR6acICi6/" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-md group hover:border-pink-500 transition-all relative aspect-[9/16] block">
+                    <img src="assets/img/benish1.webp" alt="Instagram Reel 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent flex flex-col justify-end p-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white mb-3 shadow-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-1">Kashmir Story</h3>
+                        <div class="flex items-center space-x-1 text-[11px] font-bold text-pink-400 group-hover:text-pink-300 transition-colors">
+                            <span>Watch Reel</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/reel/DeSO49bIZGd/" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-md group hover:border-pink-500 transition-all relative aspect-[9/16] block">
+                    <img src="assets/img/benishtwo.webp" alt="Instagram Reel 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent flex flex-col justify-end p-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white mb-3 shadow-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-1">Startup Kashmir Feature</h3>
+                        <div class="flex items-center space-x-1 text-[11px] font-bold text-pink-400 group-hover:text-pink-300 transition-colors">
+                            <span>Watch Reel</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/reel/DfXzSOvoucH/" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-md group hover:border-pink-500 transition-all relative aspect-[9/16] block">
+                    <img src="assets/img/benishone.webp" alt="Instagram Reel 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent flex flex-col justify-end p-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white mb-3 shadow-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-1">AI Storytelling</h3>
+                        <div class="flex items-center space-x-1 text-[11px] font-bold text-pink-400 group-hover:text-pink-300 transition-colors">
+                            <span>Watch Reel</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/reel/DfNhoM9IqdA/" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-md group hover:border-pink-500 transition-all relative aspect-[9/16] block">
+                    <img src="assets/img/benish1.webp" alt="Instagram Reel 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent flex flex-col justify-end p-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white mb-3 shadow-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-1">Kashmir Diaries</h3>
+                        <div class="flex items-center space-x-1 text-[11px] font-bold text-pink-400 group-hover:text-pink-300 transition-colors">
+                            <span>Watch Reel</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/reel/DfAlC4coPdR/" target="_blank" rel="noopener" class="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-md group hover:border-pink-500 transition-all relative aspect-[9/16] block">
+                    <img src="assets/img/benishfour.webp" alt="Instagram Reel 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent flex flex-col justify-end p-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white mb-3 shadow-lg">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-white mb-1">Cinematic Cuts</h3>
+                        <div class="flex items-center space-x-1 text-[11px] font-bold text-pink-400 group-hover:text-pink-300 transition-colors">
+                            <span>Watch Reel</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kashmir Valley Spirit Banner Section -->
+    <section id="kashmir-spirit" class="py-24 px-6 bg-base-50 relative border-t border-emerald-900/10">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm flex items-center justify-center space-x-2">
+                    <span class="w-8 h-px bg-accent"></span>
+                    <span>Our Vision</span>
+                    <span class="w-8 h-px bg-accent"></span>
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">The Spirit of Kashmir</h2>
+                <p class="text-gray-600">A land of breathtaking beauty and resilient heritage.</p>
+            </div>
+
+            <!-- Banner Image Card -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 aspect-[2.5/1] group">
+                <img src="assets/img/bannersimg.webp" alt="Kashmir Valley of Unyielding Spirit Banner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8 right-8 text-white space-y-4">
+                    <div class="w-12 h-12 rounded-full bg-emerald-950/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-accent shadow-md">
+                        <i class="fa-solid fa-mountain-sun text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white drop-shadow-lg font-display">KASHMIR</h3>
+                        <p class="text-lg text-emerald-100 drop-shadow font-medium">VALLEY OF UNYIELDING SPIRIT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section id="collaborations" class="py-24 px-6 bg-white relative border-t border-emerald-900/10">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm flex items-center justify-center space-x-2">
+                    <span class="w-8 h-px bg-accent"></span>
+                    <span>Partnerships & Recognition</span>
+                    <span class="w-8 h-px bg-accent"></span>
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">Featured Collaborations</h2>
+                <p class="text-gray-600">Proudly recognized by Startup Kashmir and partnered with leading creative storytelling platforms.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-emerald-50/40 p-8 rounded-3xl border border-emerald-900/10 shadow-sm space-y-6 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 hover:border-accent">
+                    <img src="assets/img/logo-startup-kashmir.jpg" alt="Startup Kashmir" class="w-24 h-24 object-contain rounded-2xl border border-emerald-900/10 bg-white p-2 shadow-sm">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Startup Kashmir</h3>
+                        <p class="text-accent text-sm font-semibold mt-1">Official Story Feature & Collaboration</p>
+                    </div>
+                    <p class="text-gray-600 text-sm">Our cinematic documentaries and Kashmir stories were officially featured and appreciated by Startup Kashmir.</p>
+                    <a href="https://www.instagram.com/reel/DeSO49bIZGd/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-accent text-white font-bold hover:bg-accent-hover transition-all flex items-center space-x-2 w-full justify-center shadow-md shadow-amber-500/20">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>View Reel Feature</span>
+                    </a>
+                </div>
+
+                <div class="bg-emerald-50/40 p-8 rounded-3xl border border-emerald-900/10 shadow-sm space-y-6 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 hover:border-accent">
+                    <img src="assets/img/logo-faithful-fables.jpg" alt="Faithful Fables" class="w-24 h-24 object-contain rounded-2xl border border-emerald-900/10 bg-white p-2 shadow-sm">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Faithful Fables</h3>
+                        <p class="text-accent text-sm font-semibold mt-1">Creative Partner</p>
+                    </div>
+                    <p class="text-gray-600 text-sm">Collaborative AI video creation and emotional visual storytelling projects designed to inspire audiences worldwide.</p>
+                    <a href="https://www.instagram.com/farhafaithfulfables/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-white text-gray-800 font-bold hover:bg-gray-100 transition-all border border-emerald-900/10 flex items-center space-x-2 w-full justify-center shadow-sm">
+                        <i class="fa-brands fa-instagram text-pink-600"></i>
+                        <span>Visit Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-base-50 relative border-t border-emerald-900/10">
+        <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border border-emerald-900/10 shadow-xl space-y-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="text-center space-y-3 relative z-10">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 font-display">Collaborate on Kashmir Stories</h2>
+                <p class="text-gray-600 text-sm max-w-xl mx-auto">Have a historical account, story, or brand collaboration proposal? Send a message below.</p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-6 relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Your Name</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-emerald-50/30 border border-emerald-900/10 text-gray-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Benish Nisar">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Your Email</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl bg-emerald-50/30 border border-emerald-900/10 text-gray-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="kashmirstories@example.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Message</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-emerald-50/30 border border-emerald-900/10 text-gray-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Share your thoughts or inquiry..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-accent text-white font-bold hover:bg-accent-hover transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center space-x-2">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-emerald-900/10 text-center text-sm text-gray-600 space-y-4 bg-white">
+        <div class="flex items-center justify-center space-x-3">
+            <img src="assets/img/logo.jpeg" alt="Logo" class="w-8 h-8 object-cover rounded-lg shadow-sm">
+            <span class="font-bold text-gray-900">Benish Nisar | Kashmir Stories Official</span>
+        </div>
+        <div class="flex items-center justify-center space-x-4 text-lg pt-2">
+            <a href="https://www.youtube.com/@BenishKhanStories" target="_blank" rel="noopener" class="text-gray-500 hover:text-red-600 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/benishnisar_official/" target="_blank" rel="noopener" class="text-gray-500 hover:text-pink-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Benish Nisar. All rights reserved.</p>
+        <p class="text-xs">
+            Developed by <a href="https://benish-nisar-coding.vercel.app/" target="_blank" rel="noopener" class="text-accent font-semibold underline hover:text-accent-hover">Benish Nisar Coding</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Sending...</span>';
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            setTimeout(() => {
+                alert('Thank you! Your message has been sent successfully.');
+                event.target.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
