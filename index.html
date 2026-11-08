@@ -35,7 +35,7 @@
     </script>
     <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -46,19 +46,20 @@
             font-family: 'Space Grotesk', sans-serif;
         }
         .light-panel {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(6, 78, 59, 0.1);
-            box-shadow: 0 10px 30px -5px rgba(3, 45, 32, 0.06);
+            border: 1px solid rgba(6, 78, 59, 0.12);
+            box-shadow: 0 15px 35px -5px rgba(3, 45, 32, 0.08);
         }
+        /* Overlay sirf left side par hai, right side wali image bilkul clear/crystal clear hai */
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(3, 45, 32, 0.88), rgba(2, 26, 18, 0.94)), url('assets/img/4fe545755e81570bd3e9ba92259195aa.jpg');
+            background-image: linear-gradient(to right, rgba(2, 26, 18, 0.95) 0%, rgba(2, 26, 18, 0.85) 45%, rgba(2, 26, 18, 0.2) 75%), url('assets/img/bannerbenishnisar.webp');
             background-size: cover;
             background-position: center;
         }
         .text-gradient {
-            background: linear-gradient(135deg, #FFFFFF 0%, #F59E0B 100%);
+            background: linear-gradient(135deg, #FFFFFF 20%, #F59E0B 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -76,7 +77,6 @@
     <header class="fixed top-0 left-0 right-0 z-50 light-panel border-b border-emerald-900/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3 group">
-                <!-- Logo Image in Navbar -->
                 <img src="assets/img/logo.jpeg" alt="Benish Nisar Logo" class="w-12 h-12 object-cover rounded-xl border border-emerald-900/20 shadow-sm group-hover:scale-105 transition-transform">
                 <div class="flex flex-col">
                     <span class="text-base font-bold tracking-tight text-emerald-950 leading-none">BENISH NISAR</span>
@@ -108,57 +108,38 @@
         </div>
     </header>
 
-    <!-- Hero Section (AI Video Creator Vibe) -->
-    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-6 overflow-hidden hero-bg">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
+    <!-- Hero Section: Left Aligned Text with Left-Only Overlay -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 sm:px-12 overflow-hidden hero-bg">
+        <div class="max-w-7xl w-full mx-auto relative z-10">
+            <div class="max-w-2xl text-left space-y-6">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-black/40 border border-amber-400/40 text-amber-300 text-xs font-bold tracking-widest uppercase backdrop-blur-md shadow-lg">
                     <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
-                    <span>AI Video Creator & Cinematic Storyteller</span>
+                    <span>Kashmir Stories Official • AI Creator & Storyteller</span>
                 </div>
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
-                    Giving Voice to <span class="text-gradient">Kashmir Realities</span> & AI Artistry
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] font-display drop-shadow-lg">
+                    Giving Voice to <br/><span class="text-gradient drop-shadow-md">Kashmir Realities</span> & AI Artistry
                 </h1>
-                <p class="text-lg text-emerald-100/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                    Welcome to Kashmir Stories Official. I am Benish Nisar, pushing the boundaries of AI video generation, prompt engineering, and cinematic digital production.
+                
+                <p class="text-lg sm:text-xl text-emerald-100 leading-relaxed font-normal drop-shadow">
+                    Pushing the boundaries of cinematic AI video generation, prompt engineering, and powerful socio-political storytelling from Azad Kashmir[cite: 1].
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                    <a href="#youtube-shorts" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-accent text-white font-bold hover:bg-accent-hover hover:-translate-y-1 transition-all shadow-lg shadow-amber-600/30 text-center flex items-center justify-center space-x-2">
+                
+                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#youtube-shorts" class="px-8 py-4 rounded-xl bg-accent text-white font-bold hover:bg-accent-hover hover:-translate-y-1 transition-all shadow-xl shadow-amber-600/30 text-center flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-play"></i>
                         <span>Watch AI Shorts</span>
                     </a>
-                    <a href="https://www.youtube.com/@BenishKhanStories" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold transition-all border border-white/20 backdrop-blur-md text-center flex items-center justify-center space-x-2">
+                    <a href="https://www.youtube.com/@BenishKhanStories" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl bg-black/40 hover:bg-black/60 text-white font-bold transition-all border border-white/20 backdrop-blur-md text-center flex items-center justify-center space-x-2 shadow-lg">
                         <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
                         <span>Benish Khan Stories</span>
                     </a>
-                </div>
-            </div>
-
-            <!-- Hero Portrait Card -->
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="relative w-full max-w-md group">
-                    <div class="absolute -inset-1.5 bg-gradient-to-r from-accent to-emerald-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-                    <div class="relative light-panel p-6 rounded-3xl border border-emerald-900/10 space-y-6 bg-white/95">
-                        <div class="relative h-80 rounded-2xl overflow-hidden bg-emerald-950 flex items-center justify-center shadow-inner">
-                            <img src="assets/img/benish-portrait.jpg" alt="Benish Nisar" class="w-full h-full object-cover object-top">
-                            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 z-20">
-                                <span class="px-3 py-1 rounded-full bg-accent text-white text-xs font-bold">Kashmir Stories Official</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Benish Nisar</h3>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-sm text-gray-700 font-medium">
-                            <span class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-accent"></i> <span>Kashmir & Pakistan</span></span>
-                            <span class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-accent"></i> <span>AI Creator</span></span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-  <!-- About Section -->
     <section id="about" class="py-24 px-6 bg-white relative border-t border-emerald-900/10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-5 relative">
@@ -183,7 +164,7 @@
                 </span>
                 <h2 class="text-3xl sm:text-5xl font-bold text-gray-900 font-display">Giving Voice to Azad Kashmir’s Current Realities</h2>
                 <p class="text-gray-600 text-base leading-relaxed">
-                    I am Benish Nisar, an AI video creator and digital storyteller dedicated to documenting the true narrative of Azad Kashmir. Beyond the breathtaking landscapes, my work sheds light on the evolving socio-economic challenges, public rights movements, inflation struggles, and the resilient daily realities faced by the local people.
+                    I am Benish Nisar, an AI video creator and digital storyteller dedicated to documenting the true narrative of Azad Kashmir. Beyond the breathtaking landscapes, my work sheds light on the evolving socio-economic challenges, public rights movements, inflation struggles, and the resilient daily realities faced by the local people[cite: 1].
                 </p>
                 <p class="text-gray-600 text-base leading-relaxed">
                     By merging cutting-edge AI neural rendering and cinematic prompt engineering with authentic local journalism, I transform complex regional updates and humanitarian issues into powerful, high-impact digital stories that resonate across global platforms.
@@ -433,14 +414,14 @@
             <!-- Banner Image Card -->
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 aspect-[2.5/1] group">
                 <img src="assets/img/bannersimg.webp" alt="Kashmir Valley of Unyielding Spirit Banner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8 text-white space-y-4">
-                    <div class="w-12 h-12 rounded-full bg-emerald-950/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-accent shadow-md">
+                    <div class="w-12 h-12 rounded-full bg-emerald-950/60 backdrop-blur-sm border border-white/15 flex items-center justify-center text-accent shadow-md">
                         <i class="fa-solid fa-mountain-sun text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-4xl font-bold text-white drop-shadow-lg font-display">KASHMIR</h3>
-                        <p class="text-lg text-emerald-100 drop-shadow font-medium">VALLEY OF UNYIELDING SPIRIT</p>
+                        <h3 class="text-3xl sm:text-5xl font-extrabold text-white drop-shadow-lg font-display tracking-wide">KASHMIR</h3>
+                        <p class="text-base sm:text-lg text-emerald-100 drop-shadow font-semibold tracking-wider mt-1">VALLEY OF UNYIELDING SPIRIT</p>
                     </div>
                 </div>
             </div>
@@ -558,7 +539,7 @@
             const btn = event.target.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Sending...</span>';
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Sending...<span>';
             btn.disabled = true;
             btn.classList.add('opacity-75');
 
